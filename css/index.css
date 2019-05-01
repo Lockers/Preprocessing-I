@@ -146,6 +146,7 @@ html:root {
   display: flex;
   flex-wrap: wrap;
   max-width: 800px;
+  max-width: 100vw;
   padding: 0.5rem;
   margin: 0.5rem;
   background-color: rgba(101, 93, 104, 0.13);
@@ -155,6 +156,7 @@ html:root {
 @media (max-width: 500px) {
   .main-container {
     flex-direction: column;
+    justify-content: space-evenly;
     max-width: 500px;
   }
 }
@@ -182,40 +184,72 @@ html:root {
   text-align: justify;
   font-size: 1.5rem;
   line-height: 2rem;
-  padding: 2rem;
-  margin: 2rem;
+  max-width: 100vw;
 }
-.main-container .main-info h1 {
+.main-container .main-info.main-info h1 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
   font-size: 3rem;
   margin-top: 2rem;
   margin-bottom: 3rem;
   padding-bottom: 2rem;
   border-bottom: 1px grey solid;
-  max-width: 400px;
+  max-width: 90vw;
 }
 .main-container .main-info img {
-  border-radius: 80%;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 50%;
   -webkit-transition: -webkit-transform 0.8s ease-in-out;
   transition: transform 0.8s ease-in-out;
+  max-width: 85vw;
 }
 .main-container .main-info img:hover {
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
 }
 @media (max-width: 500px) {
-  .main-container .main-info {
+}
+.main-container .middle-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .main-container .middle-content {
     flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    font-size: 2rem;
-    max-width: 500px;
+    max-width: 90vw;
   }
+}
+.main-container .table1 table {
+  width: 100%;
+}
+.main-container .table1 th {
+  height: 50px;
+}
+.main-container .about-me {
+  display: flex;
+  max-width: 50vw;
+  padding: 5rem;
+  margin: 5rem;
+}
+.main-container .strengths {
+  display: flex;
+  max-width: 50vw;
 }
 .main-container .work-history {
   display: flex;
   flex-wrap: wrap;
   max-width: 800px;
   background-color: rgba(158, 202, 153, 0.349);
+}
+@media (max-width: 500px) {
+  .main-container .work-history {
+    max-width: 94vw;
+    padding: 0.25rem;
+  }
 }
 .main-container a {
   height: 2rem;

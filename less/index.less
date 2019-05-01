@@ -15,6 +15,7 @@ html:root {
   display: flex;
   flex-wrap: wrap;
   max-width: @mainPageWidth;
+  max-width: 100vw;
   padding: @reallySmall;
   margin: @reallySmall;
   background-color: rgba(101, 93, 104, 0.13);
@@ -22,8 +23,9 @@ html:root {
   border: 2px solid black;
 
   @media (max-width: @mobileWidth) {
-	flex-direction: column;
-	max-width: @mobileWidth;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: @mobileWidth;
   }
   .navbar {
     display: flex;
@@ -48,22 +50,29 @@ html:root {
 		width: @mainPageWidth;
 		text-align: justify;
 		font-size: @normal;
-		line-height: @large;
+    line-height: @large;
+    max-width: 100vw;
 		padding: @large;
 		margin: @large;
 	
-  	& h1 {
+  	  &.main-info h1 {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
 	  	font-size: @xtraLarge;
 	  	margin-top: @large;
 	  	margin-bottom: @xtraLarge;
 	  	padding-bottom: @large;
 	  	border-bottom: 1px grey solid;
-	  	max-width: 400px;
+	  	max-width: 90vw;
 	}
 	img {
-		border-radius: 80%;
+    margin-top: 1rem;
+    padding: @small;
+		border-radius: 50%;
 		-webkit-transition: -webkit-transform 0.8s ease-in-out;
-		transition: transform 0.8s ease-in-out;
+    transition: transform 0.8s ease-in-out;
+    max-width: 85vw;
 	}
 	img:hover {
 		-webkit-transform: rotate(360deg);
@@ -71,19 +80,52 @@ html:root {
 	}
 	@media(max-width: @mobileWidth){
 		
-	  flex-direction: column;
-      align-content: center;
-      justify-content: center;
-	  font-size: @large;
-	  max-width: @mobileWidth;
+	  // flex-direction: column;
+    //   align-content: center;
+    //   justify-content: center;
+	  // font-size: @large;
+	  // max-width: 90vw;
 		}
-	}
+  }
+  .middle-content{
+    display:flex;
+    justify-content: space-between;
+    max-width: @mainPageWidth;
+    margin: 0 auto;
+    @media(max-width: @mobileWidth){
+      flex-direction: column;
+      max-width: 90vw;
+    }
+  }
+  .table {
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  }
+  .about-me{
+    display: flex;
+    max-width: 50vw;
+    padding: 5rem;
+    margin: 5rem;
+  }
+  .strengths{
+    display: flex;
+    max-width:50vw;
+  }
 
 .work-history {
 	display: flex;
 	flex-wrap: wrap;
 	max-width: @mainPageWidth;
-	background-color: rgba(158, 202, 153, 0.349);
+  background-color: rgba(158, 202, 153, 0.349);
+  @media(max-width: @mobileWidth){
+    max-width: 94vw;
+    padding: @tiny;
+  }
 }
 a {
   height: @large;
