@@ -150,8 +150,11 @@ html:root {
   padding: 0.5rem;
   margin: 0.5rem;
   width: 100%;
+  background-color: rgba(101, 93, 104, 0.13);
+  max-width: 800px;
+  margin: 0 auto;
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .main-container {
     flex-direction: column;
   }
@@ -166,7 +169,7 @@ html:root {
   font-size: 1.5rem;
   padding: 1rem;
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .main-container .navbar {
     flex-direction: column;
     align-content: center;
@@ -176,4 +179,60 @@ html:root {
 }
 .main-container .navbar.navbar a {
   padding: 0.25rem;
+}
+.main-container .main-info {
+  justify-content: center;
+  width: 800px;
+  text-align: justify;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 2rem;
+  margin: 2rem;
+}
+.main-container .main-info h1 {
+  font-size: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px grey solid;
+  max-width: 400px;
+}
+.main-container .work-history {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  background-color: rgba(158, 202, 153, 0.349);
+}
+.main-container .work-history table {
+  display: flex;
+  justify-content: space-evenly;
+  border-collapse: collapse;
+  width: 800px;
+  margin: 0.25rem;
+  padding: 0.25rem;
+}
+.main-container .work-history table,
+.main-container .work-history th,
+.main-container .work-history td {
+  display: flex;
+  border: 1px solid black;
+  margin: 0.25rem;
+  padding: 0.25rem;
+}
+@media (max-width: 550px) {
+  .main-container .work-history table {
+    display: flex;
+    flex-direction: row;
+    border-collapse: collapse;
+    width: 550px;
+  }
+  .main-container .work-history table,
+  .main-container .work-history th,
+  .main-container .work-history td {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    margin: 0.25rem;
+    padding: 0.25rem;
+  }
 }

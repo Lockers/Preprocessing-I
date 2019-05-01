@@ -3,13 +3,14 @@
 @import "fonts.less";
 
 @mainPageWidth: 800px;
-@mobileWidth: 500px;
+@mobileWidth: 550px;
 
 html:root {
   font-size: 62.5%;
   font-family: "Merriweather", serif;
   font-family: "Wendy One", sans-serif;
 }
+
 
 .main-container {
   display: flex;
@@ -19,6 +20,9 @@ html:root {
   padding: @reallySmall;
   margin: @reallySmall;
   width: @fullPageWidth;
+  background-color: rgba(101, 93, 104, 0.13);
+  max-width: @mainPageWidth;
+  margin: 0 auto; 
 
   @media (max-width: @mobileWidth) {
     flex-direction: column;
@@ -43,6 +47,60 @@ html:root {
 			padding: @tiny;
 		}
 	  }
-  
+	  .main-info{
+		  justify-content: center;
+		  width: @mainPageWidth;
+		  text-align: justify;
+		  font-size: @normal;
+		  line-height: @large;
+		  padding: @large;
+		  margin: @large;
+		  & h1{
+			  font-size: @xtraLarge;
+			  margin-top: @large;
+			  margin-bottom: @xtraLarge;
+			  padding-bottom: @large;
+			  border-bottom: 1px grey solid;
+			  max-width: 400px;
+		  }
+		}
+		.work-history{
+			display: flex;
+			flex-wrap: wrap;
+			max-width: @mainPageWidth;
+			background-color: rgba(158, 202, 153, 0.349);
+			table {
+				display: flex;
+				justify-content: space-evenly;
+  				border-collapse: collapse;
+  				width: @mainPageWidth;
+  				margin: @tiny;
+  				padding: @tiny;
+				}
+
+				table, th, td {
+				display: flex;
+  				border: 1px solid black;
+ 				margin: @tiny;
+  				padding: @tiny;
+			}
+			@media(max-width: @mobileWidth){
+				table {
+				display: flex;
+				flex-direction: row;
+  				border-collapse: collapse;
+  				width: @mobileWidth;
+				}
+
+				table, th, td {
+				display: flex;
+				flex-direction: row;
+  				border: 1px solid black;
+ 				margin: @tiny;
+  				padding: @tiny;
+			}
+			}
+		}
+	  
 	}
 
