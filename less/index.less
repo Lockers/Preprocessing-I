@@ -3,7 +3,7 @@
 @import "fonts.less";
 
 @mainPageWidth: 800px;
-@mobileWidth: 550px;
+@mobileWidth: 500px;
 
 html:root {
   font-size: 62.5%;
@@ -11,96 +11,99 @@ html:root {
   font-family: "Wendy One", sans-serif;
 }
 
-
 .main-container {
   display: flex;
   flex-wrap: wrap;
-  max-width: mainPageWidth;
-  justify-content: right;
+  max-width: @mainPageWidth;
   padding: @reallySmall;
   margin: @reallySmall;
-  width: @fullPageWidth;
   background-color: rgba(101, 93, 104, 0.13);
-  max-width: @mainPageWidth;
-  margin: 0 auto; 
+  margin: 0 auto;
+  border: 2px solid black;
 
   @media (max-width: @mobileWidth) {
-    flex-direction: column;
+	flex-direction: column;
+	max-width: @mobileWidth;
   }
-  .navbar{
-	  display: flex;
-	  flex-wrap: wrap;
-	  justify-content: flex-end;
-	  background-color: @navBackground;
-	  color: @navText;
-	  width: @fullPageWidth;
-	  font-size: @normal;
-	  padding: @small;
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    background-color: @navBackground;
+    color: @navText;
+    width: @fullPageWidth;
+    font-size: @normal;
+    padding: @small;
 
-	 	 @media (max-width: @mobileWidth) {
-		  flex-direction: column;
-		  align-content: center;
-		  justify-content: center;
-		  font-size: @large;
-		}
-		&.navbar a{
-			padding: @tiny;
-		}
-	  }
-	  .main-info{
-		  justify-content: center;
-		  width: @mainPageWidth;
-		  text-align: justify;
-		  font-size: @normal;
-		  line-height: @large;
-		  padding: @large;
-		  margin: @large;
-		  & h1{
-			  font-size: @xtraLarge;
-			  margin-top: @large;
-			  margin-bottom: @xtraLarge;
-			  padding-bottom: @large;
-			  border-bottom: 1px grey solid;
-			  max-width: 400px;
-		  }
-		}
-		.work-history{
-			display: flex;
-			flex-wrap: wrap;
-			max-width: @mainPageWidth;
-			background-color: rgba(158, 202, 153, 0.349);
-			table {
-				display: flex;
-				justify-content: space-evenly;
-  				border-collapse: collapse;
-  				width: @mainPageWidth;
-  				margin: @tiny;
-  				padding: @tiny;
-				}
+    @media (max-width: @mobileWidth) {
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      font-size: @large;
+    }
+}
 
-				table, th, td {
-				display: flex;
-  				border: 1px solid black;
- 				margin: @tiny;
-  				padding: @tiny;
-			}
-			@media(max-width: @mobileWidth){
-				table {
-				display: flex;
-				flex-direction: row;
-  				border-collapse: collapse;
-  				width: @mobileWidth;
-				}
-
-				table, th, td {
-				display: flex;
-				flex-direction: row;
-  				border: 1px solid black;
- 				margin: @tiny;
-  				padding: @tiny;
-			}
-			}
+	.main-info {
+		justify-content: center;
+		width: @mainPageWidth;
+		text-align: justify;
+		font-size: @normal;
+		line-height: @large;
+		padding: @large;
+		margin: @large;
+	
+  	& h1 {
+	  	font-size: @xtraLarge;
+	  	margin-top: @large;
+	  	margin-bottom: @xtraLarge;
+	  	padding-bottom: @large;
+	  	border-bottom: 1px grey solid;
+	  	max-width: 400px;
+	}
+	img {
+		border-radius: 80%;
+		-webkit-transition: -webkit-transform 0.8s ease-in-out;
+		transition: transform 0.8s ease-in-out;
+	}
+	img:hover {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+	@media(max-width: @mobileWidth){
+		
+	  flex-direction: column;
+      align-content: center;
+      justify-content: center;
+	  font-size: @large;
+	  max-width: @mobileWidth;
 		}
-	  
 	}
 
+.work-history {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: @mainPageWidth;
+	background-color: rgba(158, 202, 153, 0.349);
+}
+a {
+  height: @large;
+  width: 9rem;
+  text-decoration: none;
+  text-align: center;
+  justify-content: center;
+  padding-top: @reallySmall;
+
+  color: black;
+  background-color: transparent;
+
+  transition: background-color 1s linear;
+  -moz-transition: background-color 1s linear;
+  -webkit-transition: background-color 1s linear;
+  -ms-transition: background-color 1s linear;
+
+  &:hover {
+	background-color: rgb(175, 148, 148);
+	color: rgb(52, 20, 196);
+  }
+}
+}
