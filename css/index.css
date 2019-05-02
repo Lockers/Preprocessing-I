@@ -146,6 +146,7 @@ html:root {
   display: flex;
   flex-wrap: wrap;
   max-width: 800px;
+  max-width: 100vw;
   padding: 0.5rem;
   margin: 0.5rem;
   background-color: rgba(101, 93, 104, 0.13);
@@ -182,17 +183,27 @@ html:root {
   width: 800px;
   text-align: justify;
   font-size: 1.5rem;
+<<<<<<< HEAD
   line-height: 3rem;
   padding: 3rem;
   margin: 3rem;
 }
 .main-container .main-info.main-info h1 {
   display: flex;
+=======
+  line-height: 2rem;
+  max-width: 100vw;
+}
+.main-container .main-info.main-info h1 {
+  display: flex;
+  align-items: flex-end;
+>>>>>>> 4521d95b7ffec912ab5076d97a83d4a0fb7b436b
   justify-content: flex-start;
   font-size: 3rem;
   margin-top: 2rem;
   margin-bottom: 3rem;
   border-bottom: 1px grey solid;
+<<<<<<< HEAD
 }
 @media (max-width: 500px) {
   .main-container .main-info {
@@ -201,6 +212,9 @@ html:root {
     width: 100%;
     margin: 1rem;
   }
+=======
+  max-width: 90vw;
+>>>>>>> 4521d95b7ffec912ab5076d97a83d4a0fb7b436b
 }
 .main-container .main-info img {
   margin-top: 1rem;
@@ -247,10 +261,40 @@ html:root {
   background-color: #666;
 }
 @media (max-width: 500px) {
+<<<<<<< HEAD
   .main-container .middle-content {
     flex-direction: column;
     justify-content: center;
+=======
+}
+.main-container .middle-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .main-container .middle-content {
+    flex-direction: column;
+    max-width: 90vw;
+>>>>>>> 4521d95b7ffec912ab5076d97a83d4a0fb7b436b
   }
+}
+.main-container .table1 table {
+  width: 100%;
+}
+.main-container .table1 th {
+  height: 50px;
+}
+.main-container .about-me {
+  display: flex;
+  max-width: 50vw;
+  padding: 5rem;
+  margin: 5rem;
+}
+.main-container .strengths {
+  display: flex;
+  max-width: 50vw;
 }
 .main-container .work-history {
   display: flex;
