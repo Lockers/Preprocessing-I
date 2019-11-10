@@ -1,0 +1,187 @@
+@import './variables.scss';
+
+.container {
+    background-color: $container-color;
+    color: $right-color;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+}
+
+.nav a {
+    text-decoration: none;
+    color: $right-color;
+    margin: 1.5rem auto;
+    justify-content: space-around;
+}
+
+
+header h1,
+header p {
+    text-align: center;
+    color: $left-color;
+    padding: 0.5rem;
+}
+
+.content-container {
+    display: flex;
+
+    .left-content {
+        display: flex;
+        flex-direction: column;
+        color: $container-color;
+        background-color: $left-color;
+        width: 40%;
+
+        img {
+            height: 8rem;
+            width: 8rem;
+            border-radius: 50%;
+            margin: 3rem auto;
+        }
+
+        .name {
+
+            font-size: 0.75rem;
+            margin: 2rem;
+        }
+
+        .title-container {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $container-color;
+        }
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .right-content {
+        display: flex;
+        flex-direction: column;
+        color: $container-color;
+        background-color: $right-color;
+        width: 70%;
+
+    }
+
+    .skills-container {
+        width: 100%;
+        font-size: 0.75rem;
+        padding-bottom: 2rem;
+
+        // margin: 2rem;
+        .skills {
+            margin: 0rem 1rem 0rem 2rem;
+            display: inline-block;
+            width: 30%;
+        }
+
+        .html {
+            display: inline-block;
+            width: 50%;
+            background-color: $container-color;
+        }
+
+        .javascript {
+            display: inline-block;
+            width: 40%;
+            background-color: $container-color;
+
+        }
+
+        .react {
+            display: inline-block;
+            width: 40%;
+            background-color: $container-color;
+        }
+
+        .node {
+            display: inline-block;
+            width: 40%;
+            background-color: $container-color;
+        }
+
+        .python {
+            display: inline-block;
+            width: 30%;
+            background-color: $container-color;
+        }
+
+        .skills {
+            margin: 0rem 1rem 0rem 2rem;
+            display: inline-block;
+            width: 30%;
+        }
+
+        .teamwork {
+            display: inline-block;
+            width: 50%;
+            background-color: $container-color;
+        }
+
+        .communication {
+            display: inline-block;
+            width: 50%;
+            background-color: $container-color;
+
+        }
+
+        .leadership {
+            display: inline-block;
+            width: 30%;
+            background-color: $container-color;
+        }
+
+        .teachability {
+            display: inline-block;
+            width: 50%;
+            background-color: $container-color;
+
+        }
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: space-between;
+        word-wrap: break-word;
+
+        .number-email {
+            width: 48%;
+            padding: 2rem;
+        }
+
+        .address {
+            width: 48%;
+            padding: 2rem;
+        }
+    }
+
+    .work-exp, .education {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        font-size: 0.75rem;
+    }
+
+    .work-exp-title {
+        width: 20%;
+        padding: 0rem 2rem 0rem 2rem;
+    }
+
+    .work-exp-content {
+        width: 60%;
+        padding: 0rem 2rem 0rem 2rem;
+    }
+    h3 {
+        text-align: center;
+        border-right: 1px solid $container-color;
+    }
+
+}
